@@ -9,13 +9,14 @@ module.exports = function(grunt) {
       src: ['backbone.fetch-cache.js'],
       options: {
         helpers: [
-          'spec/support/*.js'
+          'spec/support/matchers.js',
+          'node_modules/sinon/lib/sinon.js'
         ],
         specs : 'spec/**/*.spec.js',
         vendor: [
-          'spec/lib/jquery*.js',
-          'spec/lib/underscore.js',
-          'spec/lib/backbone.js'
+          'node_modules/jquery/dist/jquery.js',
+          'node_modules/underscore/underscore.js',
+          'node_modules/backbone/backbone.js'
         ],
         timeout : 5000,
         phantomjs : { 'ignore-ssl-errors' : true }
